@@ -32,3 +32,8 @@ console.log(a);
 // shift => frist out value on the array
 aShift = a.shift();
 console.log(a);
+
+// discturing array 
+let x = ["prince", "rifat", "ezaz"];
+let [v, b, c] = x;
+console.log(v);

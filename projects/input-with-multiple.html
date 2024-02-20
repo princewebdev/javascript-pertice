@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple</title>
+</head>
+<body>
+    <div>
+        <input  id="num" type="number">
+        <input id="submit" type="submit" value="submit">
+        <h2></h2>
+    </div>
+    
+    <script>
+        let num = document.querySelector("#num");
+        let submit = document.querySelector("#submit");
+        let h2 = document.querySelector("h2");
+
+        submit.addEventListener("click", function(){
+            h2.innerHTML = "";
+            var x = num.value;
+            if(!x == ""){
+                for(let i = 1; i <= 10 ; i++){
+                h2.innerHTML += (`${x} X ${i} = ${i*x} <br>`)
+                }
+            }else{
+                alert("Please Wite Some Number")
+            }
+        })
+    </script>
+</body>
+</html>

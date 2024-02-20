@@ -9,3 +9,13 @@ console.log(a);
 // add a key and value in object 
 a.id= 2;
 console.log(a);
+
+// discturing object 
+let x = {
+    id : 1,
+    name: "Prince",
+    age : 21,
+    } 
+
+let {id, b, c} = x;
+console.log(b);
