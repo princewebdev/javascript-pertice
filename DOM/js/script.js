@@ -25,3 +25,9 @@ world.style = "color: red";
 world.addEventListener( 'click', () => {
     world.innerHTML = "Change Text";
 })
+
+// nodelist 
+let li = document.querySelectorAll("li");
+li.forEach((item => {
+    console.log(item)
+}))
