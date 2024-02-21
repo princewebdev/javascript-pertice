@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Gessing</title>
+    <style>
+        .boxTwo {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="boxOne">
+        <h2>Player 1</h2>
+        <input id="numOne" autocomplete="off" type="password">
+        <button id="btnOne">Play</button>
+    </div>
+
+    <div class="boxTwo">
+        <h2>Player 2</h2>
+        <input id="numTwo" type="number">
+        <button id="btnTwo">Play</button>
+    </div>
+
+    <script>
+        let boxOne = document.querySelector(".boxOne");
+        let numOneVal = document.querySelector("#numOne");
+        let btnOne = document.querySelector("#btnOne");
+
+        let boxTwo = document.querySelector(".boxTwo");
+        let numTwoVal = document.querySelector("#numTwo");
+        let btnTwo = document.querySelector("#btnTwo");
+        let attamp = 0;
+
+        btnOne.addEventListener("click", () => {
+            let numOneVal = document.querySelector("#numOne").value;
+            let numTwoVal = document.querySelector("#numTwo").value;
+            if (numOneVal === "") {
+                alert("Please input some number");
+            } else {
+                if (Boolean(numOneVal)) {
+                    if (numOneVal < 10) {
+                        boxOne.style.display = "none";
+                        boxTwo.style.display = "block";
+                    } else {
+                        alert("Please give a number less then 10")
+                    }
+                }
+                else {
+                    alert("Please input valid number")
+                }
+            }
+        });
+        btnTwo.addEventListener("click", () => {
+            attamp++;
+            let numOneVal = document.querySelector("#numOne").value;
+            let numTwoVal = document.querySelector("#numTwo").value;
+            if(numTwoVal === ""){
+                alert("Please input some number");
+            }else{
+                if(Boolean(numTwoVal)){
+                    if(numTwoVal < 10){
+                        if(attamp <=  5 ){
+                            if(numOneVal === numTwoVal ){
+                            alert("Player 2 is winner")
+                            }else if (attamp === 5 && numOneVal !== numTwoVal) {
+                                alert("Player 1 is winner")
+                            }
+                        }
+                    }else{
+                        alert("Please give a number less then 10")
+                    }
+                }else{
+                    alert("Please input valid number");
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
