@@ -14,3 +14,9 @@ let z = x.filter((item) => {
     return item > "banana";
 })
 console.log(z);
+
+// set timeout method
+setTimeout(()=>  console.log("hello time out"), 3000);
+
+// set time interval like a loop
+setInterval(() => console.log("hello time insterval"), 1000);
