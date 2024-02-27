@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    
+    <h1 data-stop="20"></h1>
+    <script>
+        let count = 0;
+        const h1 = document.querySelector("h1");
+        const counterStop = document.querySelector("h1").dataset.stop ;
+        let counter = () => {
+            ++count;
+            h1.innerHTML = count;
+            if(count == counterStop){
+                clearInterval(intVal);
+            }
+        }
+        const intVal = setInterval(()=>{
+            counter();
+        }, 1000);
+        
+    </script>
+</body>
+</html>
